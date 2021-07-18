@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
+import exception.ParsedException;
 import org.apache.http.HttpStatus;
 import org.apache.http.ParseException;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -36,7 +37,7 @@ public class Grabber {
                 CloseableHttpResponse response = client.execute(createRequest(OFFSET));
                 final int statusCode = response.getStatusLine().getStatusCode();
                 if (HttpStatus.SC_OK != statusCode) {
-                    throw new ParseException("Can not get response");
+                    throw new ParsedException("Can not get response");
                 }
                 String jsonResponse = EntityUtils.toString(response.getEntity());
                 info = MAPPER.readValue(jsonResponse, ResponseInfo.class);
