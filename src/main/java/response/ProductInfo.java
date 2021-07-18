@@ -16,7 +16,7 @@ public class ProductInfo {
 
     private long endTime;
 
-    private int phase;
+    private long phase;
 
     private String productTitle;
 
@@ -42,11 +42,11 @@ public class ProductInfo {
 
     private String productAverageStar;
 
-    private int itemEvalTotalNum;
+    private long itemEvalTotalNum;
 
     public ProductInfo() {}
 
-    public long getProductId() {
+    public Long getProductId() {
         return productId;
     }
 
@@ -54,7 +54,7 @@ public class ProductInfo {
         this.productId = productId;
     }
 
-    public long getSellerId() {
+    public Long getSellerId() {
         return sellerId;
     }
 
@@ -78,7 +78,7 @@ public class ProductInfo {
         this.oriMaxPrice = oriMaxPrice;
     }
 
-    public long getPromotionId() {
+    public Long getPromotionId() {
         return promotionId;
     }
 
@@ -86,7 +86,7 @@ public class ProductInfo {
         this.promotionId = promotionId;
     }
 
-    public long getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
@@ -94,7 +94,7 @@ public class ProductInfo {
         this.startTime = startTime;
     }
 
-    public long getEndTime() {
+    public Long getEndTime() {
         return endTime;
     }
 
@@ -102,7 +102,7 @@ public class ProductInfo {
         this.endTime = endTime;
     }
 
-    public int getPhase() {
+    public Long getPhase() {
         return phase;
     }
 
@@ -206,7 +206,7 @@ public class ProductInfo {
         this.productAverageStar = productAverageStar;
     }
 
-    public int getItemEvalTotalNum() {
+    public Long getItemEvalTotalNum() {
         return itemEvalTotalNum;
     }
 
