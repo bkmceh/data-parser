@@ -1,4 +1,6 @@
-public class Product {
+package response;
+
+public class ProductInfo {
 
     private long productId;
 
@@ -42,7 +44,7 @@ public class Product {
 
     private int itemEvalTotalNum;
 
-    public Product() {}
+    public ProductInfo() {}
 
     public long getProductId() {
         return productId;

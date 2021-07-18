@@ -1,13 +1,16 @@
+package response;
+
 import java.util.List;
 
-public class ProductList {
+public class ResponseInfo {
+
     private String contextId;
 
     private boolean success;
 
     private int code;
 
-    private List<Product> results;
+    private List<ProductInfo> results;
 
     private boolean finished;
 
@@ -19,13 +22,13 @@ public class ProductList {
 
     private String pin;
 
-    public ProductList() {}
+    public ResponseInfo() {}
 
-    public List<Product> getResults() {
+    public List<ProductInfo> getResults() {
         return results;
     }
 
-    public void setResults(List<Product> results) {
+    public void setResults(List<ProductInfo> results) {
         this.results = results;
     }
 
