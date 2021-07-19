@@ -2,6 +2,10 @@ package response;
 
 import java.util.List;
 
+/**
+ * This class store data from json that we get after request
+ * field Result store information about product
+ */
 public class ResponseInfo {
 
     private String contextId;
