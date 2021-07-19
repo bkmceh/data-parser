@@ -1,12 +1,12 @@
-package response;
+package domain.dto;
 
 import java.util.List;
 
 /**
  * This class store data from json that we get after request
- * field Result store information about product
+ * field Results store information about product
  */
-public class ResponseInfo {
+public class InformationDTO {
 
     private String contextId;
 
@@ -14,7 +14,7 @@ public class ResponseInfo {
 
     private int code;
 
-    private List<ProductInfo> results;
+    private List<ProductDTO> results;
 
     private boolean finished;
 
@@ -26,13 +26,13 @@ public class ResponseInfo {
 
     private String pin;
 
-    public ResponseInfo() {}
+    public InformationDTO() {}
 
-    public List<ProductInfo> getResults() {
+    public List<ProductDTO> getResults() {
         return results;
     }
 
-    public void setResults(List<ProductInfo> results) {
+    public void setResults(List<ProductDTO> results) {
         this.results = results;
     }
 

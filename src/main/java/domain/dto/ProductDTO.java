@@ -1,9 +1,9 @@
-package response;
+package domain.dto;
 
 /**
  * This class store information about product that we get from request
  */
-public class ProductInfo {
+public class ProductDTO {
 
     private long productId;
 
@@ -47,7 +47,7 @@ public class ProductInfo {
 
     private long itemEvalTotalNum;
 
-    public ProductInfo() {}
+    public ProductDTO() {}
 
     public Long getProductId() {
         return productId;

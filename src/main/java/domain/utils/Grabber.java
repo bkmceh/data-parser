@@ -1,10 +1,12 @@
+package domain.utils;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.io.IOException;
-import response.ProductInfo;
-import response.ResponseInfo;
-import exception.ParsedException;
+import domain.dto.ProductDTO;
+import domain.dto.InformationDTO;
 import org.apache.http.HttpStatus;
+import org.apache.http.ParseException;
 import org.apache.http.util.EntityUtils;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
@@ -19,7 +21,7 @@ public class Grabber {
     private final String url;
     private static final int LIMIT = 10;
     private static final ObjectMapper MAPPER = new ObjectMapper();
-    private static final List<ProductInfo> PRODUCTS = new ArrayList<>();
+    private static final List<ProductDTO> PRODUCTS = new ArrayList<>();
     private static final DataStorage DATA_STORAGE = new DataStorage();
     private static final String RUSSIAN_REGION_COOKIE = "aep_usuc_f=region=RU&site=rus&b_locale=ru_RU&c_tp=RUB";
 
@@ -30,10 +32,10 @@ public class Grabber {
     /**
      * parse the site and get data about products
      * @param PRODUCT_COUNT store the count of products
-     * @return {@code DataStorage} that store information from json response
+     * @return {@code domain.utils.DataStorage} that store information from json domain.response
      */
     public DataStorage parse(final int PRODUCT_COUNT) {
-        ResponseInfo info = new ResponseInfo();
+        InformationDTO info = new InformationDTO();
         int page = 0;
         while (PRODUCTS.size() < PRODUCT_COUNT) {
             int OFFSET = page * LIMIT;
@@ -41,10 +43,10 @@ public class Grabber {
                 CloseableHttpResponse response = client.execute(createRequest(OFFSET));
                 final int statusCode = response.getStatusLine().getStatusCode();
                 if (HttpStatus.SC_OK != statusCode) {
-                    throw new ParsedException("Unable to get response");
+                    throw new ParseException("Unable to get domain.response");
                 }
                 String jsonResponse = EntityUtils.toString(response.getEntity());
-                info = MAPPER.readValue(jsonResponse, ResponseInfo.class);
+                info = MAPPER.readValue(jsonResponse, InformationDTO.class);
             } catch (IOException e) {
                 e.printStackTrace();
             }

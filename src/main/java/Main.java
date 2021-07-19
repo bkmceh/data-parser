@@ -1,3 +1,7 @@
+import domain.utils.Grabber;
+import domain.utils.DataStorage;
+import domain.utils.creator.CSVCreator;
+
 public class Main {
 
     private final static int PRODUCT_COUNT = 100;
@@ -7,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         DataStorage dataStorage = new Grabber(URL).parse(PRODUCT_COUNT);
-        CSVCreator.saveData(dataStorage, CSV_PATH, CSV_SEPARATOR);
+        CSVCreator csvFile = new CSVCreator(CSV_PATH, CSV_SEPARATOR);
+        csvFile.save(dataStorage);
     }
 }
