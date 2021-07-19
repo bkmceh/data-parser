@@ -1,5 +1,8 @@
 package response;
 
+/**
+ * This class store information about product that we get from request
+ */
 public class ProductInfo {
 
     private long productId;
