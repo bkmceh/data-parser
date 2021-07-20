@@ -1,6 +1,6 @@
-import utils.Grabber;
-import utils.DataStorage;
-import utils.creator.CSVCreator;
+import service.Grabber;
+import service.DataStorage;
+import service.creator.CSVCreator;
 
 public class Main {
 

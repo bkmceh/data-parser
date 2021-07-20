@@ -1,4 +1,4 @@
-package validator;
+package service.validator;
 
 public class FieldValidator {
 

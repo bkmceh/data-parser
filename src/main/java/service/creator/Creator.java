@@ -1,6 +1,6 @@
-package utils.creator;
+package service.creator;
 
-import utils.DataStorage;
+import service.DataStorage;
 
 public interface Creator {
     void save(DataStorage data);
