@@ -1,6 +1,6 @@
-import domain.utils.Grabber;
-import domain.utils.DataStorage;
-import domain.utils.creator.CSVCreator;
+import utils.Grabber;
+import utils.DataStorage;
+import utils.creator.CSVCreator;
 
 public class Main {
 

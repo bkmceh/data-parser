@@ -1,4 +1,4 @@
-package domain.utils.creator;
+package utils.creator;
 
 import java.io.*;
 import java.util.List;
@@ -7,9 +7,9 @@ import java.nio.file.Paths;
 
 import domain.dto.ProductDTO;
 import java.lang.reflect.Field;
-import domain.utils.DataStorage;
+import utils.DataStorage;
 import domain.mapper.ProductDTOMapper;
-import domain.validator.FieldValidator;
+import validator.FieldValidator;
 import domain.exception.FileCreateException;
 
 import java.nio.charset.StandardCharsets;

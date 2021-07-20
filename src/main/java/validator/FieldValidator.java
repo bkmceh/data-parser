@@ -1,4 +1,4 @@
-package domain.validator;
+package validator;
 
 public class FieldValidator {
 

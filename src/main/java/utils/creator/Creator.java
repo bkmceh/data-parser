@@ -1,6 +1,6 @@
-package domain.utils.creator;
+package utils.creator;
 
-import domain.utils.DataStorage;
+import utils.DataStorage;
 
 public interface Creator {
     void save(DataStorage data);

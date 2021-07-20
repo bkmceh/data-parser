@@ -1,4 +1,4 @@
-package domain.utils;
+package utils;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class Grabber {
     /**
      * parse the site and get data about products
      * @param PRODUCT_COUNT store the count of products
-     * @return {@code domain.utils.DataStorage} that store information from json domain.response
+     * @return {@code utils.DataStorage} that store information from json domain.response
      */
     public DataStorage parse(final int PRODUCT_COUNT) {
         InformationDTO info = new InformationDTO();
