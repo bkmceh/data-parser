@@ -1,8 +1,11 @@
 package domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * This class store information about product that we get from request
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductDTO {
 
     private long productId;
