@@ -2,26 +2,26 @@
 
 ## 🤖 Information
 
-### ☝ Что программа делает? 
-Получает данные о товарах с сайта и сохраняет их в формате _.csv_
+### ☝ What does the program do? 
+Receives product data from the site and saves it in the _.csv_ format
 
-Сохраняет данные с сайта _Aliexpress_: `https://flashdeals.aliexpress.com/en.htm?`
+Saves data from _Aliexpress_ website: `https://flashdeals.aliexpress.com/en.htm?`
 
-### ☝ Сколько товаров парсит?
-По дефолту программа получает данные о первых 100 товаров.
+### ☝ How many products are parsed?
+By default, the program receives data for the first 100 products.
 
-Если нужно другое количество, просто измените значение переменной в классе _Main.java_:
+If you need a different number of products, just change the value of the variable in the _Main.java_ class:
 ``` java
 private final static int PRODUCT_COUNT = 100;
 ```
-### ☝ Какой формат .csv?
-Все поля и значения разделены через `,`
+### ☝ What is the _.csv_ format?
+All fields and values are separated by `,`
 
-Если нужен другой разделитель, просто измените значение переменной в классе _Main.java_:
+If you need a different delimiter, just change the value of the variable in the _Main.java_ class:
 ``` java
 private final static String CSV_SEPARATOR = ",";
 ```
 ## 📝 How to run
-Для получения данных, склонируйте репозиторий к себе и запустите _Main.java_
+To get the data, clone the repository to yourself and run _Main.java_
 
-По умолчанию файл будет сохранен в _./csv/products-data.csv_
+By default, the file will be saved to _./csv/products-data.csv_
