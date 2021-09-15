@@ -24,4 +24,4 @@ private final static String CSV_SEPARATOR = ",";
 ## 📝 How to run
 To get the data, clone the repository to yourself and run _Main.java_
 
-By default, the file will be saved to _./csv/products-data.csv_
+By default, the file will be saved to `./csv/products-data.csv`
